@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Menu lateral*/
+
+nav.menu-lateral{
+    width: 55px;
+    height: 100%;
+    background-color: #1c1c1c;
+    padding: 40px 0px 40px 6px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir{
+    width: 350px;
+}
+
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.btn-expandir > i{
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .5s;
+}
+
+ul li.ativo{
+    background-color: #7083db;
+}
+
+
+ul li.item-menu:hover{
+    background: #7083db;
+}
+
+ul li.item-menu a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: 1s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+
+/*Site*/
+body {
+    background-image: url("fundo14.jpg");
+    background-color: #000000;
+    background-repeat:no-repeat;
+    width: 97%;
+    height: 100vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 10% auto 10%;
+}
+
+.logo {
+    width: 8rem;
+    height: 3.5rem;
+    padding-top: 30px;
+}
+
+.logo:hover{
+    opacity: 0.5;
+    transition: .4s;
+}
+
+.icons {
+    color: #c0c0c0;
+    height: 5rem;
+    
+}
+
+.icons .fab {
+    margin: 40px 10px auto 10px;
+}
+
+.ilustracao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:row-reverse;
+    margin: 0px 10% 0px 10%;
+}
+.ilustracao img {
+    width: 50%;
+}
+
+.filme {
+    color: #F9F9F9;
+    width: 30vw;
+}
+
+.filme h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.filme h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 35pt;
+}
+
+.filme p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.filme button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    color: #F9F9F9;
+    padding: 2%;
+    margin: 3px;
+    cursor:pointer;
+}
+
+.botoes{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.filme .cadastro {
+    background-color: rgb(144, 65, 175);;
+    border: 1px solid rgb(144, 65, 175);
+    color: rgb(241, 241, 241);
+}
+
+.filme .login {
+    background-color: Transparent;
+    border:rgb(144, 65, 175) solid 3px;
+}
+
+.filme .cadastro:hover{
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    background: rgb(243, 243, 243);
+    transition: .4s;
+}
+
+.filme .login:hover{
+    border: 3px solid rgb(254, 254, 254);
+    color: rgb(175, 170, 170);
+    transition: .4s;
+}
+
+@media screen and (max-width: 900px) {
+
+    body {
+        height: 100%;
+    }
+
+    .ilustracao {
+        flex-direction: column;
+        margin-left: 100px;
+    }
+
+    header{
+        margin-left: 120px;
+    }
+
+    .icons{
+        flex-direction: column;
+        display: flex;
+        color: #F9F9F9;
+    }
+    
+    .ilustracao img {
+        width: 100%;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .filme {
+        width: 97%;
+    }
+
+    .filme p, h1, h2 {
+        margin: 5px;
+    }
+
+    .filme .agora {
+        margin: 20px;
+    }
+
+    .filme .trailer {
+        display: none;
+    }
+
+    .botoes{
+        font-size: 20px;
+    }
+}  
